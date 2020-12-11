@@ -5,16 +5,16 @@ import os
 import struct
 
 # 服务器端文件夹位置
-FILEPATH = "E:/Python学习/socket网络编程/服务器文件/"
+FILEPATH = "./"
 
 # 创建sever服务器
 sever = socket(AF_INET, SOCK_STREAM)
-ip_port = ('', 21566)
+ip_port = ('', 22000)
 buffSize = 1024
 
 # 监听
 sever.bind(ip_port)
-sever.listen(5)
+sever.listen(3)
 
 while True:
     # 连接客户端
@@ -22,7 +22,6 @@ while True:
     clientSock, addr = sever.accept()
     print("connected with ", end='')
     print(addr)
-    print()
 
     # 开始通信
     while True:

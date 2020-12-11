@@ -6,11 +6,11 @@ import sys
 import time
 
 # 用户的文件夹路径
-FILEPATH = "E:/Python学习/socket网络编程/用户文件/"
+FILEPATH = os.getcwd() + "/share/"
 
 # 创建客户端
 client = socket(AF_INET, SOCK_STREAM)
-ip_port = ('127.0.0.1', 21566)
+ip_port = ('192.168.89.129', 22000)
 buffSize = 1024
 client.connect(ip_port)
 print("connecting...")
@@ -23,11 +23,11 @@ while True:
 
     # 上传文件
     if select == "1":
-        fileName = input("请输入要上传的文件名加后缀：").strip()
+        fileName = "CW1.pdf"
         fileInfor = FILEPATH + fileName
 
         # 得到文件的大小
-        filesize_bytes = os.path.getsize(fileInfor)
+        filesize_bytes = os.path.getsize(FILEPATH)
 
         # 创建复制文件
         fileName = "new" + fileName
