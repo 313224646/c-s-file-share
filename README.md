@@ -2,7 +2,7 @@
 复制到3个虚拟机：VMA，VMB和VMC，具有相同的设置；
 
 2. 对于每个虚拟机，您的应用程序将启动为：
-python3 main.py --ip 192.168.xxx.xxx，192.168.xxx.xxx 5
+python3 main.py --ip 192.168.xxx.xxx，192.168.xxx.xxx
 
 3. VMA将启动并正在运行。它应该运行无任何错误（RUN_A）。
 
